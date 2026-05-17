@@ -52,18 +52,18 @@ export default function ComparisonPage() {
         <section>
           <h2 className="text-2xl font-bold mb-8 text-center">Feature Comparison</h2>
           <div className="overflow-x-auto">
-            <table className="w-full text-sm">
+            <table>
               <thead>
-                <tr className="border-b border-border">
-                  <th className="text-left py-3 px-4 font-medium">Feature</th>
-                  <th className="py-3 px-4 font-medium">glyde</th>
-                  <th className="py-3 px-4 font-medium">axios</th>
-                  <th className="py-3 px-4 font-medium">ky</th>
-                  <th className="py-3 px-4 font-medium">wretch</th>
-                  <th className="py-3 px-4 font-medium">got</th>
+                <tr>
+                  <th>Feature</th>
+                  <th>glyde</th>
+                  <th>axios</th>
+                  <th>ky</th>
+                  <th>wretch</th>
+                  <th>got</th>
                 </tr>
               </thead>
-              <tbody className="divide-y divide-border/50">
+              <tbody>
                 <FeatureRow feature="Zero dependencies" glyde wretch />
                 <FeatureRow feature="TypeScript-first" glyde ky wretch />
                 <FeatureRow feature="Native fetch" glyde ky wretch />
@@ -210,12 +210,12 @@ function FeatureRow({
 }) {
   return (
     <tr>
-      <td className="py-3 px-4 text-muted-foreground">{feature}</td>
-      <td className="py-3 px-4 text-center">{glyde ? <Check className="h-4 w-4 text-green-500 mx-auto" /> : <Minus className="h-4 w-4 text-muted-foreground/40 mx-auto" />}</td>
-      <td className="py-3 px-4 text-center">{axios ? <Check className="h-4 w-4 text-green-500 mx-auto" /> : <Minus className="h-4 w-4 text-muted-foreground/40 mx-auto" />}</td>
-      <td className="py-3 px-4 text-center">{ky ? <Check className="h-4 w-4 text-green-500 mx-auto" /> : <Minus className="h-4 w-4 text-muted-foreground/40 mx-auto" />}</td>
-      <td className="py-3 px-4 text-center">{wretch ? <Check className="h-4 w-4 text-green-500 mx-auto" /> : <Minus className="h-4 w-4 text-muted-foreground/40 mx-auto" />}</td>
-      <td className="py-3 px-4 text-center">{got ? <Check className="h-4 w-4 text-green-500 mx-auto" /> : <Minus className="h-4 w-4 text-muted-foreground/40 mx-auto" />}</td>
+      <td>{feature}</td>
+      <td className="text-center">{glyde ? <Check className="h-4 w-4 text-green-500 mx-auto" /> : <Minus className="h-4 w-4 text-muted-foreground/40 mx-auto" />}</td>
+      <td className="text-center">{axios ? <Check className="h-4 w-4 text-green-500 mx-auto" /> : <Minus className="h-4 w-4 text-muted-foreground/40 mx-auto" />}</td>
+      <td className="text-center">{ky ? <Check className="h-4 w-4 text-green-500 mx-auto" /> : <Minus className="h-4 w-4 text-muted-foreground/40 mx-auto" />}</td>
+      <td className="text-center">{wretch ? <Check className="h-4 w-4 text-green-500 mx-auto" /> : <Minus className="h-4 w-4 text-muted-foreground/40 mx-auto" />}</td>
+      <td className="text-center">{got ? <Check className="h-4 w-4 text-green-500 mx-auto" /> : <Minus className="h-4 w-4 text-muted-foreground/40 mx-auto" />}</td>
     </tr>
   )
 }

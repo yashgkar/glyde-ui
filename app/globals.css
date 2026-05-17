@@ -73,6 +73,39 @@
   body {
     @apply bg-background text-foreground antialiased;
   }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.875rem;
+    border-radius: 0.75rem;
+    overflow: hidden;
+    border: 1px solid var(--border);
+  }
+  thead {
+    background: var(--muted);
+  }
+  thead th {
+    text-align: left;
+    padding: 0.75rem 1rem;
+    font-weight: 600;
+    font-size: 0.8rem;
+    color: var(--foreground);
+    border-bottom: 1px solid var(--border);
+  }
+  tbody tr {
+    border-bottom: 1px solid var(--border);
+  }
+  tbody tr:last-child {
+    border-bottom: none;
+  }
+  tbody td {
+    padding: 0.75rem 1rem;
+    color: var(--muted-foreground);
+  }
+  tbody tr:hover {
+    background: rgba(124, 111, 234, 0.03);
+  }
 }
 
 @layer utilities {

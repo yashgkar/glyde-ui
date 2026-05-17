@@ -1,10 +1,9 @@
 import { CodeBlock } from "@/components/code-block"
+import { InstallBlock } from "@/components/install-block"
 
 export const metadata = {
   title: "Getting Started — glyde",
 }
-
-const installCode = `npm install glyde`
 
 const basicUsage = `import plane from "glyde"
 
@@ -48,7 +47,9 @@ export default function DocsPage() {
 
       <section>
         <h2>Installation</h2>
-        <CodeBlock code={installCode} language="bash" />
+        <div className="not-prose">
+          <InstallBlock />
+        </div>
         <p className="mt-4">
           glyde has <strong>zero dependencies</strong>. It works anywhere native <code>fetch</code> is
           available: browsers, Node.js 18+, Bun, Deno, and Cloudflare Workers.

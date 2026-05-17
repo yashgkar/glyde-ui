@@ -1,4 +1,5 @@
 import { codeToHtml } from "shiki"
+import { CopyButton } from "./copy-button"
 
 export async function CodeBlock({
   code,
@@ -9,16 +10,19 @@ export async function CodeBlock({
 }) {
   const html = await codeToHtml(code, {
     lang: language,
-    themes: {
-      light: "github-light",
-      dark: "github-dark",
-    },
+    theme: "github-light",
   })
 
   return (
     <div
-      className="rounded-xl overflow-hidden text-sm [&_pre]:p-4 [&_pre]:overflow-x-auto [&_pre]:bg-transparent! [&_.shiki]:bg-transparent!"
-      dangerouslySetInnerHTML={{ __html: html }}
-    />
+      className="group relative rounded-xl  overflow-hidden"
+      style={{ backgroundColor: "#ffffff" }}
+    >
+      <CopyButton code={code} />
+      <div
+        className="text-sm [&_pre]:p-4 [&_pre]:overflow-x-auto [&_pre]:bg-transparent! [&_.shiki]:bg-transparent! font-mono [&_.shiki]:border-none!"
+        dangerouslySetInnerHTML={{ __html: html }}
+      />
+    </div>
   )
 }

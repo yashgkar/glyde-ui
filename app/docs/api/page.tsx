@@ -95,10 +95,14 @@ export default function ApiPage() {
       <section>
         <h2>plane(config?)</h2>
         <p>
-          Creates a new HTTP client instance. Every call returns an independent instance with
-          its own config and interceptors. Available as both default and named export.
+          Creates a new HTTP client instance. Every call returns an independent
+          instance with its own config and interceptors. Available as both
+          default and named export.
         </p>
-        <CodeBlock code={`import plane from "glyde"\n// or\nimport { plane } from "glyde"`} language="typescript" />
+        <CodeBlock
+          code={`import plane from "glyde"\n// or\nimport { plane } from "glyde"`}
+          language="typescript"
+        />
       </section>
 
       <section>
@@ -114,11 +118,49 @@ export default function ApiPage() {
               </tr>
             </thead>
             <tbody>
-              <tr><td><code>baseURL</code></td><td><code>""</code></td><td>Prepended to relative URLs</td></tr>
-              <tr><td><code>timeout</code></td><td><code>0</code></td><td>Milliseconds before abort (0 = no timeout)</td></tr>
-              <tr><td><code>responseType</code></td><td><code>"json"</code></td><td>How to parse the response body</td></tr>
-              <tr><td><code>withCredentials</code></td><td><code>false</code></td><td>If true, sets credentials: "include"</td></tr>
-              <tr><td><code>headers</code></td><td>JSON defaults</td><td>Content-Type and Accept set to application/json</td></tr>
+              <tr>
+                <td>
+                  <code>baseURL</code>
+                </td>
+                <td>
+                  <code>""</code>
+                </td>
+                <td>Prepended to relative URLs</td>
+              </tr>
+              <tr>
+                <td>
+                  <code>timeout</code>
+                </td>
+                <td>
+                  <code>0</code>
+                </td>
+                <td>Milliseconds before abort (0 = no timeout)</td>
+              </tr>
+              <tr>
+                <td>
+                  <code>responseType</code>
+                </td>
+                <td>
+                  <code>"json"</code>
+                </td>
+                <td>How to parse the response body</td>
+              </tr>
+              <tr>
+                <td>
+                  <code>withCredentials</code>
+                </td>
+                <td>
+                  <code>false</code>
+                </td>
+                <td>If true, sets credentials: "include"</td>
+              </tr>
+              <tr>
+                <td>
+                  <code>headers</code>
+                </td>
+                <td>JSON defaults</td>
+                <td>Content-Type and Accept set to application/json</td>
+              </tr>
             </tbody>
           </table>
         </div>
@@ -132,15 +174,18 @@ export default function ApiPage() {
       <section>
         <h2>Timeout</h2>
         <p>
-          Set a timeout in milliseconds. When exceeded, a <code>TimeoutError</code> is thrown.
-          Internally uses <code>AbortController</code>.
+          Set a timeout in milliseconds. When exceeded, a{" "}
+          <code>TimeoutError</code> is thrown. Internally uses{" "}
+          <code>AbortController</code>.
         </p>
         <CodeBlock code={timeoutCode} language="typescript" />
       </section>
 
       <section>
         <h2>Cancellation</h2>
-        <p>Pass an <code>AbortSignal</code> to cancel requests manually.</p>
+        <p>
+          Pass an <code>AbortSignal</code> to cancel requests manually.
+        </p>
         <CodeBlock code={abortCode} language="typescript" />
       </section>
 
@@ -152,15 +197,19 @@ export default function ApiPage() {
       <section>
         <h2>File Upload</h2>
         <p>
-          When body is <code>FormData</code> or <code>URLSearchParams</code>, Content-Type is
-          automatically removed so the browser sets the correct multipart boundary.
+          When body is <code>FormData</code> or <code>URLSearchParams</code>,
+          Content-Type is automatically removed so the browser sets the correct
+          multipart boundary.
         </p>
         <CodeBlock code={uploadCode} language="typescript" />
       </section>
 
       <section>
         <h2>Streaming</h2>
-        <p>Returns a <code>ReadableStream</code> without consuming the response body.</p>
+        <p>
+          Returns a <code>ReadableStream</code> without consuming the response
+          body.
+        </p>
         <CodeBlock code={streamCode} language="typescript" />
       </section>
     </div>
