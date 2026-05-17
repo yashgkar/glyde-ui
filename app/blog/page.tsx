@@ -2,7 +2,8 @@ import Link from "next/link"
 import { Calendar, ArrowRight } from "lucide-react"
 
 export const metadata = {
-  title: "Blog — glyde",
+  title: "Blog",
+  description: "Articles about glyde HTTP client, supply chain security, zero-dependency architecture, and Next.js auth patterns.",
 }
 
 const posts = [

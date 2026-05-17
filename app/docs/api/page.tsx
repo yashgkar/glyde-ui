@@ -1,7 +1,8 @@
 import { CodeBlock } from "@/components/code-block"
 
 export const metadata = {
-  title: "API Reference — glyde",
+  title: "API Reference",
+  description: "Complete API reference for glyde HTTP client. Methods, request config, response types, timeout, file upload, streaming, and cancellation.",
 }
 
 const configCode = `interface RequestConfig {

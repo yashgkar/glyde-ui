@@ -2,7 +2,8 @@ import { CodeBlock } from "@/components/code-block"
 import { Check, X, Minus } from "lucide-react"
 
 export const metadata = {
-  title: "Comparison — glyde vs axios, ky, wretch, got",
+  title: "glyde vs axios, ky, wretch, got",
+  description: "Side-by-side comparison of TypeScript HTTP clients. glyde is 97% smaller than axios with zero dependencies, typed errors, and async interceptors.",
 }
 
 const glydeExample = `import plane from "glyde"

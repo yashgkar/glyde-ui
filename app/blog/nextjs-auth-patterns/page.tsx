@@ -3,6 +3,7 @@ import { BlogPostHeader, BlogPostContent } from "@/components/blog-post"
 
 export const metadata = {
   title: "Auth patterns for Next.js App Router with glyde",
+  description: "How to handle authentication in Next.js App Router with glyde. Middleware token refresh, tower/passenger pattern, and httpOnly cookie security.",
 }
 
 const middlewareCode = `// middleware.ts

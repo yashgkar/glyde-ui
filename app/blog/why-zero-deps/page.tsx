@@ -2,6 +2,7 @@ import { BlogPostHeader, BlogPostContent } from "@/components/blog-post"
 
 export const metadata = {
   title: "Why zero dependencies matters in 2026",
+  description: "After the axios supply chain attack, zero dependencies is the only safe number. How glyde eliminates transitive vulnerability risk entirely.",
 }
 
 export default function WhyZeroDepsPage() {

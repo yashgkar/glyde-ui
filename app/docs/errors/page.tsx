@@ -1,7 +1,8 @@
 import { CodeBlock } from "@/components/code-block"
 
 export const metadata = {
-  title: "Error Handling — glyde",
+  title: "Error Handling",
+  description: "Typed error hierarchy for glyde: HttpError, TimeoutError, NetworkError. Catch errors by type with TypeScript type guards instead of string matching.",
 }
 
 const hierarchyCode = `// Error hierarchy

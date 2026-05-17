@@ -2,7 +2,8 @@ import { CodeBlock } from "@/components/code-block"
 import { InstallBlock } from "@/components/install-block"
 
 export const metadata = {
-  title: "Getting Started — glyde",
+  title: "Getting Started",
+  description: "Install glyde and make your first typed HTTP request in under a minute. Zero dependencies, works with Node.js, Bun, Deno, and browsers.",
 }
 
 const basicUsage = `import plane from "glyde"

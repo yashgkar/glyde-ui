@@ -1,7 +1,8 @@
 import { CodeBlock } from "@/components/code-block"
 
 export const metadata = {
-  title: "Interceptors — glyde",
+  title: "Interceptors",
+  description: "Async request and response interceptors for glyde. Add auth headers, transform responses, handle errors, and build middleware pipelines.",
 }
 
 const requestInterceptor = `// Add auth header to every request

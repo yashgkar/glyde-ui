@@ -1,7 +1,8 @@
 import { CodeBlock } from "@/components/code-block"
 
 export const metadata = {
-  title: "Next.js Usage — glyde",
+  title: "Next.js Usage",
+  description: "Use glyde with Next.js App Router. Server-side tower pattern, client-side passenger pattern, and middleware token refresh for auth.",
 }
 
 const towerCode = `// lib/api/server.ts — "tower" (server-side instance)

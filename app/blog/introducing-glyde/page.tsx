@@ -3,6 +3,7 @@ import { BlogPostHeader, BlogPostContent } from "@/components/blog-post"
 
 export const metadata = {
   title: "Introducing glyde — HTTP requests that glyde",
+  description: "Announcing glyde: a zero-dependency, TypeScript-first HTTP client built on native fetch. 1.73 KB gzipped, 97% smaller than axios.",
 }
 
 const quickStart = `import plane from "glyde"
